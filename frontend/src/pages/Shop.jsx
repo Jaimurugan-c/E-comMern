@@ -1,11 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Hero from '../components/hero/Hero'
+import Popular from '../components/popular/Popular'
 
 const Shop = () => {
   return (
     <div>
-      <h1>This is shop</h1>
-    
+     <Hero/>
+
+     <Popular/>
    </div>
   )
 }

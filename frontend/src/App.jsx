@@ -7,6 +7,7 @@ import LoginSignup from './pages/LoginSignup.jsx'
 import Product from './pages/Product.jsx'
 import {BrowserRouter , Routes, Route} from 'react-router-dom'
 import Cart from './pages/Cart.jsx'
+
 function App() {
 
   return (
