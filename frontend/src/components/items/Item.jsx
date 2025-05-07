@@ -6,10 +6,10 @@ const Item = (props) => {
    <img src={props.image}/>
    <p>{props.name}</p>
    <div className="item-prices">
-     <div className="iteem-price-new">
+     <div className="item-price-new">
       {props.new_price}
      </div>
-     <div className="iteem-price-old">
+     <div className="item-price-old">
      {props.old_price}
      </div>
    </div>
