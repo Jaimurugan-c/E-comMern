@@ -1,0 +1,112 @@
+.footer-modern {
+  background-color: #111;
+  color: #ddd;
+  padding: 4rem 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  text-align: left;
+}
+
+.footer-logo {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+
+.footer-brand h2 {
+  color: #ffa500;
+  margin-bottom: 0.3rem;
+}
+
+.footer-brand p {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.footer-menus {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-menu h4 {
+  margin-bottom: 0.5rem;
+  color: #ffa500;
+}
+
+.footer-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu li {
+  margin: 0.8rem 0;
+  font-size: 0.95rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+.footer-menu li:hover {
+  color: #fff;
+  transform: translateX(5px); /* Subtle animation on hover */
+}
+
+.footer-menu li a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color */
+  display: block;
+  padding: 5px 0;
+}
+
+.footer-menu li a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.footer-social {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-social img {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-social img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(255, 165, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .footer-menus {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}

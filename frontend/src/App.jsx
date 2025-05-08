@@ -7,7 +7,7 @@ import LoginSignup from './pages/LoginSignup.jsx'
 import Product from './pages/Product.jsx'
 import {BrowserRouter , Routes, Route} from 'react-router-dom'
 import Cart from './pages/Cart.jsx'
-
+import Footer from './components/footer/Footer.jsx'
 function App() {
 
   return (
@@ -26,6 +26,7 @@ function App() {
             <Route path = '/cart'element={<Cart/>} /> 
             <Route path = '/login'element={<LoginSignup/>} /> 
                </Routes>
+               <Footer/>
       </BrowserRouter>
      </div>
     </>
