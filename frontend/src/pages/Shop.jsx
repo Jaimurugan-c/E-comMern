@@ -7,6 +7,7 @@ import NewCollections from '../components/NewCollections/NewCollections'
 import NewsLetter from '../components/newsletter/NewsLetter'
 
 
+
 const Shop = () => {
   return (
     <div>
@@ -15,7 +16,7 @@ const Shop = () => {
       <Offers/>
       <NewCollections/>
      <NewsLetter/>
- 
+  
    </div>
   )
 }
