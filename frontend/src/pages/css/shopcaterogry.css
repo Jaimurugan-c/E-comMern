@@ -52,4 +52,16 @@
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
   }
-  
+  .shopcategory-loadmore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:150px auto;
+    width: 233px;
+    height: 69px;
+    border-radius: 75px;
+    background: #F2F2F2;
+    color: rgb(85, 83, 83);
+    font-size: 18px;
+    font-weight: 600;
+  }
