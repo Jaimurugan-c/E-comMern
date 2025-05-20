@@ -11,7 +11,6 @@ import Footer from './components/footer/Footer.jsx'
 import men_banner from './components/assets/banner_mens.png'
 import women_banner from './components/assets/banner_women.png'
 import kid_banner from './components/assets/banner_kids.png'
-import Breadcrumb from './components/breadcrumb/Breadcrum.jsx'
 
 
 function App() {
