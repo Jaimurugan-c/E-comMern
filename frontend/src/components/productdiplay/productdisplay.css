@@ -1,0 +1,134 @@
+.productdisplay {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px 170px;
+  gap: 40px;
+}
+
+.productdisplay-left {
+  display: flex;
+  gap: 17px;
+}
+
+.productdisplay-img-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.productdisplay-img-list img {
+  height: 150px;
+  width: 120px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.productdisplay-img-list img:hover {
+  transform: scale(1.05);
+}
+
+.productdisplay-main-img {
+  width: 500px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.productdisplay-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.productdisplay-right h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.productdisplay-right-star {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.product-right-prices {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.productdisplay-right-price-old {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.productdisplay-right-price-new {
+  color: green;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.productdisplay-right-des {
+  line-height: 1.5;
+  color: #333;
+}
+
+.productdisplay-right-size h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.productdisplay-right-sizes {
+  display: flex;
+  gap: 10px;
+}
+
+.productdisplay-right-sizes div {
+  border: 1px solid #333;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.productdisplay-right-sizes div:hover {
+  background-color: #f2f2f2;
+}
+
+.productdisplay-right button {
+  width: 200px;
+  padding: 12px;
+  background-color: rgb(250, 103, 18);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.productdisplay-right button:hover {
+  background-color: darkorange;
+}
+
+.productdisplay-right-category {
+  font-size: 14px;
+  color: #555;
+}
+
+.productdisplay-right-category span {
+  font-weight: bold;
+  color: #333;
+}
+
+
+
