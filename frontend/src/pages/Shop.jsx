@@ -9,6 +9,7 @@ import NewsLetter from '../components/newsletter/NewsLetter'
 
 
 const Shop = () => {
+  
   return (
     <div>
      <Hero/>
