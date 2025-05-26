@@ -51,3 +51,32 @@
  margin-right: 30px;
  height: 100vh;
 }
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+        width: 100vw;
+        padding: 40px 0;
+    }
+    .hero-left {
+        margin-left: 20px;
+        padding-right: 20px;
+        gap: 15px;
+    }
+    .hero-left p {
+        font-size: 48px;
+    }
+    .hero-hand-icon img {
+        width: 60px;
+    }
+    .hero-latest-btn {
+        width: 200px;
+        height: 50px;
+        font-size: 16px;
+    }
+    .hero-right img {
+        margin: 20px auto 0 auto;
+        height: 40vh;
+        display: block;
+    }
+}

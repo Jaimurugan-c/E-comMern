@@ -26,3 +26,17 @@
     padding:48px;
     padding-bottom: 70px;
 }
+@media (max-width: 900px) {
+    .descriptionbox {
+        margin: 40px 10px;
+    }
+    .disbox-des {
+        padding: 24px;
+        padding-bottom: 40px;
+    }
+    .dis-nav-box {
+        width: 120px;
+        height: 50px;
+        font-size: 14px;
+    }
+}

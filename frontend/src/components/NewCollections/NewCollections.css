@@ -27,3 +27,31 @@
     gap:30px;
 
 }
+@media (max-width: 1024px) {
+    .collections {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .collections {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .new-collections {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .collections {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .new-collections h2 {
+        font-size: 1.3rem;
+    }
+    .new-collections hr {
+        width: 100px;
+    }
+}

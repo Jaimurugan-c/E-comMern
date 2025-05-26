@@ -31,3 +31,16 @@
     height: 80%;
     border-radius: 10px;
 }
+
+@media (max-width: 600px) {
+    .item {
+        width: 100%;
+    }
+    .item img {
+        height: auto;
+    }
+    .item-prices {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
