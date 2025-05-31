@@ -1,9 +1,11 @@
 import React from 'react'
+import Cartitems from '../components/cartitems/Cartitems.jsx'
 
 const Cart = () => {
   return (
     <div>
-      <h1>cart</h1>
+     <Cartitems/>
+     
     </div>
   )
 }
