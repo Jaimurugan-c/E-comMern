@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="footer-brand">
           <img src={footer_logo} alt="Shopy Logo" className="footer-logo" />
           <h2>Shopy</h2>
-          <p>© {new Date().getFullYear()} Shopy. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Shopy.Designed by jai.</p>
         </div>
 
         <div className="footer-menus">
