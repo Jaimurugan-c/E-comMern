@@ -36,7 +36,7 @@ const Cartitems = () => {
         return null;
       })}
     </div>
-  );clea
+  );
   r
 };
 

@@ -66,7 +66,7 @@ hr {
   display: none; /* Not needed in card layout */
 }
 
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
     .cart-item-format-main,
     .cartitems-format {
         grid-template-columns: 1fr 2fr 1fr 1fr 0.5fr;
@@ -79,7 +79,7 @@ hr {
     }
 }
 
-@media (max-width: 500px) {
+@media only screen and (max-width: 500px) {
     .cart-item-format-main,
     .cartitems-format {
         grid-template-columns: 1fr 2fr 1fr;
