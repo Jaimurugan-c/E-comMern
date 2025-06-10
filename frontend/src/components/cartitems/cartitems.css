@@ -242,6 +242,51 @@ hr {
         width: 99%;
     }
 }
+/* Extra small devices (max-width: 400px) */
+@media only screen and (max-width: 400px) {
+  .cart-item-format-main,
+  .cartitems-format {
+    grid-template-columns: 1fr 1fr;
+    font-size: 11px;
+    padding: 6px 2px;
+  }
+
+  .cart-icon-producticon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .cartitems {
+    width: 100%;
+    margin: 10px 0;
+    padding: 0;
+  }
+
+  .cartitems-down {
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .cartitemtotal,
+  .cartitems-promocode {
+    min-width: unset;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .cartitems-promobox {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .cartitems-promobox input,
+  .cartitems-promobox button {
+    width: 100%;
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
 .cartitems-promobox input {
   flex: 1;
   padding: 10px 14px;
