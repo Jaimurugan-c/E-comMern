@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "myproject",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "start": "node --experimental-modules index.js",
+    "dev": "nodemon --exec node --experimental-modules index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -13,6 +16,7 @@
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.15.1",
-    "multer": "^2.0.1"
+    "multer": "^2.0.1",
+    "nodemon": "^3.1.10"
   }
 }
