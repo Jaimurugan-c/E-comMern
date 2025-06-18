@@ -1,3 +1,114 @@
-.add-product{
-    
+.add-product {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 800px;
+    padding: 32px 48px;
+    margin: 32px auto;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    box-shadow: 0 4px 24px rgba(60, 72, 88, 0.10);
+}
+
+.addproduct-itemfield {
+    width: 100%;
+    color: #374151;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 18px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.addproduct-itemfield label {
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.addproduct-itemfield input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 48px;
+    border-radius: 6px;
+    padding-left: 16px;
+    border: 1.5px solid #a5b4fc;
+    outline: none;
+    color: #374151;
+    background: #f1f5f9;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.addproduct-itemfield input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px #c7d2fe;
+}
+
+.add-product button,
+.add-product input[type="submit"] {
+    margin-top: 18px;
+    padding: 12px 32px;
+    background: linear-gradient(90deg, #6366f1 0%, #818cf8 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition:0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+}
+
+.add-product button:hover,
+.add-product input[type="submit"]:hover {
+    background: linear-gradient(90deg, #4f46e5 0%, #6366f1 100%);
+}
+
+.add-price {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 18px;
+}
+.add-product-select {
+    width: 100%;
+    height: 48px;
+    border-radius: 6px;
+    padding-left: 16px;
+    border: 1.5px solid #a5b4fc;
+    outline: none;
+    color: #374151;
+    background: #f1f5f9;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    appearance: none;
+}
+
+.add-product-select:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px #c7d2fe;
+}
+.thumbnail-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1.5px solid #a5b4fc;
+    background: #f1f5f9;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+    display: block;
+    margin-top: 12px;
+}
+@media (max-width: 600px) {
+    .add-product {
+        padding: 16px 8px;
+    }
+    .add-price {
+        flex-direction: column;
+        gap: 16px;
+    }
 }
