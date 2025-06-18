@@ -1,0 +1,124 @@
+.listproduct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px 50px;
+    margin: 30px;
+    border-radius: 6px;
+   background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+}
+
+.listproduct h1 {
+    color: #454545;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.listproduct-format {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    padding: 20px 0px;
+    color: #454545;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.listproduct-format-main {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    padding: 20px 0px;
+    color: #454545;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.listproduct-product {
+    height: 80px;
+}
+
+.listproduct-remove-icon {
+    cursor: pointer;
+    margin: auto;
+    width: 20px;
+}
+
+.listproduct-allproduct {
+    width: 100%;
+}
+
+hr {
+    width: 100%;
+    height: 2px;
+    background: #e2e2e2;
+    border: none;
+}
+/* Tablets and below */
+@media (max-width: 768px) {
+  .listproduct {
+    padding: 10px 20px;
+    margin: 20px 10px;
+  }
+
+  .listproduct-format,
+  .listproduct-format-main {
+    grid-template-columns: 1fr 2fr 1fr; /* Show only essential columns */
+    font-size: 14px;
+  }
+
+  /* Hide columns: Old Price, New Price, Category */
+  .listproduct-format p:nth-child(3),
+  .listproduct-format p:nth-child(4),
+  .listproduct-format p:nth-child(5),
+  .listproduct-format-main p:nth-child(3),
+  .listproduct-format-main p:nth-child(4),
+  .listproduct-format-main p:nth-child(5) {
+    display: none;
+  }
+
+  .listproduct-product {
+    height: 60px;
+  }
+
+  .listproduct-remove-icon {
+    width: 18px;
+  }
+}
+
+/* Mobile and below */
+@media (max-width: 480px) {
+  .listproduct {
+    padding: 10px;
+    margin: 10px 5px;
+  }
+
+  .listproduct h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .listproduct-format,
+  .listproduct-format-main {
+    grid-template-columns: 1fr 1fr;
+    font-size: 13px;
+    gap: 6px;
+    padding: 12px 0;
+  }
+
+  /* Hide everything except image and title */
+  .listproduct-format p:nth-child(n+3),
+  .listproduct-format-main p:nth-child(n+3),
+  .listproduct-remove-icon {
+    display: none;
+  }
+
+  .listproduct-product {
+    height: 50px;
+  }
+}

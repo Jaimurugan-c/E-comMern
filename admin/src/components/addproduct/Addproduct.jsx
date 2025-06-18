@@ -54,6 +54,7 @@ const Addproduct = () => {
 
   return (
     <div className='add-product'>
+      <h1>Add Product</h1>
       <div className="addproduct-itemfield">
         <p>Product Title</p>
         <input
