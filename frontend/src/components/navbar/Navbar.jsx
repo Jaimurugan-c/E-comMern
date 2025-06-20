@@ -11,14 +11,14 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="nav-logo">
-        <img src={logo} alt="Shopy Logo" />
+        <img src={logo} alt="Shopy Logo"/>
         <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
           <p>shopy</p>
         </Link>
       </div>
 
       <ul className="nav-menu">
-        <li onClick={() => setMenu("shop")}>
+        <li onClick={() => setMenu("shop")}>0
           <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
             Shop
           </Link>

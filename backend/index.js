@@ -155,6 +155,9 @@ app.post('/addproduct', async (req, res) => {
   }
 });
 
+//scema creating for user
+
+
 // 1️⃣4️⃣ Start the server
 app.listen(PORT, () => {
   console.log(`🚀 Server is running on http://localhost:${PORT}`);
