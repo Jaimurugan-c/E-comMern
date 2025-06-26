@@ -1,20 +1,30 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playwrite+VN:wght@100..400&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
-    <link rel="preload" href="/path/to/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-COM</title>
+
+    <!-- ✅ Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playwrite+VN:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ✅ Preload main stylesheet (optional if already imported in main.jsx) -->
+    <link rel="preload" as="style" href="/src/index.css" />
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- ✅ Vite will inject all JS + CSS here during build -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
