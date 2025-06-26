@@ -18,6 +18,10 @@
     align-items: center;
     gap:10px;
 }
+.nav-logo img {
+  max-width: 120px;
+  height: auto;
+}
 .nav-logo p{
      color: black;
      font-size: 38px;

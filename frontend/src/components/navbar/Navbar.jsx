@@ -7,18 +7,25 @@ import { ShopContext } from '../../context/ShopContext.jsx';
 
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
-  const {getTotalCartItems}=useContext(ShopContext)
+  const shopContext = useContext(ShopContext);
+  const getTotalCartItems = shopContext?.getTotalCartItems || (() => 0);
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    window.location.replace('/');
+  };
+
   return (
     <div className="navbar">
       <div className="nav-logo">
-        <img src={logo} alt="Shopy Logo"/>
+        <img src={logo} alt="Shopy Logo" />
         <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
           <p>shopy</p>
         </Link>
       </div>
 
       <ul className="nav-menu">
-        <li onClick={() => setMenu("shop")}>0
+        <li onClick={() => setMenu("shop")}>
           <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
             Shop
           </Link>
@@ -45,9 +52,14 @@ const Navbar = () => {
       </ul>
 
       <div className="nav-login-cart">
-        <Link to="/login" style={{ textDecoration: 'none' }}>
-          <button>Login</button>
-        </Link>
+        {localStorage.getItem("token") ? (
+          <button onClick={handleLogout}>Logout</button>
+        ) : (
+          <Link to="/login" style={{ textDecoration: 'none' }}>
+            <button>Login</button>
+          </Link>
+        )}
+
         <Link to="/cart" style={{ textDecoration: 'none' }}>
           <img src={cart_icon} alt="Cart Icon" />
         </Link>
