@@ -1,4 +1,4 @@
-// 1️⃣ Importing required packages
+// 1️1 Importing required packages
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
@@ -7,36 +7,36 @@ import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
 
-// 2️⃣ Setting up the port number
+// 2️2 Setting up the port number
 const PORT = 4000;
 
-// 3️⃣ Creating an instance of Express
+// 3️3 Creating an instance of Express
 const app = express();
 
-// 4️⃣ MongoDB connection URI
+// 4️4 MongoDB connection URI
 const MONGO_URI = 'mongodb://localhost:27017/e-com';
 
-// 5️⃣ Middleware to parse JSON and handle CORS
+// 5️5 Middleware to parse JSON and handle CORS
 app.use(express.json());
 app.use(cors());
 
-// 6️⃣ Connect to MongoDB
+// 6️6 Connect to MongoDB
 mongoose.connect(MONGO_URI)
-  .then(() => console.log('✅ Connected to MongoDB'))
-  .catch(err => console.error('❌ MongoDB connection error:', err));
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(err => console.error('MongoDB connection error:', err));
 
 // 7️⃣ Test route
 app.get('/', (req, res) => {
-  res.send("ellame innme nala tha nadakum patasum summave koluthama vedikum 🚀");
+  res.send("ellame innme nala tha nadakum patasum summave koluthama vedikum");
 });
 
-// 🔧 Ensure upload/images directory exists
+// Ensure upload/images directory exists
 const uploadDir = './upload/images';
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
 }
 
-// 8️⃣ Multer storage config
+// 8 Multer storage config
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, uploadDir);
@@ -46,16 +46,16 @@ const storage = multer.diskStorage({
   }
 });
 
-// 9️⃣ Initialize Multer
+// 9 Initialize Multer
 const upload = multer({
   storage,
   limits: { fileSize: 5 * 1024 * 1024 } // 5MB limit
 });
 
-// 🔟 Make uploaded images public
+// Make uploaded images public
 app.use('/images', express.static(uploadDir));
 
-// 1️⃣1️⃣ Upload endpoint
+// 11 Upload endpoint
 app.post('/upload', upload.single('product'), (req, res) => {
   try {
     if (!req.file) {
@@ -72,7 +72,7 @@ app.post('/upload', upload.single('product'), (req, res) => {
   }
 });
 
-// 1️⃣2️⃣ Product Schema
+// 12 Product Schema
 const productSchema = new mongoose.Schema({
   id: Number,
   name: String,
@@ -85,7 +85,7 @@ const productSchema = new mongoose.Schema({
 });
 const Product = mongoose.model('Product', productSchema);
 
-// 🗑️ Delete Product Endpoint
+// Delete Product Endpoint
 app.post('/removeproduct', async (req, res) => {
   try {
     const result = await Product.findOneAndDelete({ id: req.body.id });
@@ -96,7 +96,7 @@ app.post('/removeproduct', async (req, res) => {
   }
 });
 
-// 📦 Get All Products
+// Get All Products
 app.get('/allproducts', async (req, res) => {
   try {
     const products = await Product.find({});
@@ -106,7 +106,7 @@ app.get('/allproducts', async (req, res) => {
   }
 });
 
-// 🧠 Middleware: fetchUser
+// Middleware: fetchUser
 const fetchUser = (req, res, next) => {
   const token = req.header('auth-token');
   if (!token) return res.status(401).json({ success: 0, message: 'Access denied' });
@@ -119,21 +119,21 @@ const fetchUser = (req, res, next) => {
   }
 };
 
-// 🔄 New Collections Endpoint
+// New Collections Endpoint
 app.get('/newcollections', async (req, res) => {
   const products = await Product.find({});
   const newCollection = products.slice(-8);
   res.send(newCollection);
 });
 
-// 🔝 Popular in Women Endpoint
+// Popular in Women Endpoint
 app.get('/popularinwomen', async (req, res) => {
   const products = await Product.find({ category: "women" });
   const popularInWomen = products.slice(0, 4);
   res.send(popularInWomen);
 });
 
-// 🛒 Cart Endpoints (User Schema required)
+// Cart Endpoints (User Schema required)
 const userSchema = new mongoose.Schema({
   name: String,
   email: { type: String, unique: true },
@@ -157,7 +157,7 @@ app.post('/removefromcart', fetchUser, async (req, res) => {
   res.send("removed");
 });
 
-// ➕ Add Product
+// Add Product
 app.post('/addproduct', async (req, res) => {
   try {
     const lastProduct = await Product.findOne().sort({ id: -1 });
@@ -173,7 +173,7 @@ app.post('/addproduct', async (req, res) => {
   }
 });
 
-// 🛒 Get Cart
+// Get Cart
 app.post('/getcart', fetchUser, async (req, res) => {
   try {
     const user = await Users.findById(req.user.id);
@@ -183,7 +183,7 @@ app.post('/getcart', fetchUser, async (req, res) => {
   }
 });
 
-// 📝 Signup
+// Signup
 app.post('/signup', async (req, res) => {
   const { name, email, password } = req.body;
   if (!name || !email || !password) return res.status(400).json({ success: 0, message: 'All fields are required' });
@@ -200,7 +200,7 @@ app.post('/signup', async (req, res) => {
   res.status(201).json({ success: 1, token });
 });
 
-// 🔐 Login
+// Login
 app.post('/login', async (req, res) => {
   const { email, password } = req.body;
   const user = await Users.findOne({ email });
@@ -210,7 +210,7 @@ app.post('/login', async (req, res) => {
   res.json({ success: 1, message: 'Login successful', token });
 });
 
-// 1️⃣4️⃣ Start the server
+// Start the server
 app.listen(PORT, () => {
-  console.log(`🚀 Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
