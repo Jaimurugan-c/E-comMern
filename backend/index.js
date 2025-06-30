@@ -25,7 +25,7 @@ mongoose.connect(MONGO_URI)
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));
 
-// 7️⃣ Test route
+// 7 Test route
 app.get('/', (req, res) => {
   res.send("ellame innme nala tha nadakum patasum summave koluthama vedikum");
 });
